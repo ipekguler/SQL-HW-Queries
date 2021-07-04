@@ -6,7 +6,7 @@ WHERE length(country)>=6
 AND country LIKE '%n';
 
 SELECT title FROM film
-WHERE (LENGTH(title) - LENGTH(REPLACE(title, 't', ''))) + (LENGTH(title) - LENGTH(REPLACE(title, 'T', '')))>=4;
+WHERE title ILIKE '%t%t%t%t%';
 
 SELECT * FROM film
 WHERE title LIKE 'C%'
